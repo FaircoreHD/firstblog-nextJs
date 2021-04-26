@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "judul" : "Sample blog post",
+        "body" : "<p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>"
+    },
+    {
+        "id" : 2,
+        "judul" : "Another blog post",
+        "body" : "<p>I am ready for the road less traveled. Already <a href='#'>brushing off the dust</a>. Yeah, you're lucky if you're on her plane. I used to bite my tongue and hold my breath. Uh, She’s a beast. I call her Karma (come back). Black ray-bans, you know she's with the band. I can't sleep let's run away and don't ever look back, don't ever look back.</p>"
+    },
+    {
+        "id" : 3,
+        "judul" : "New feature",
+        "body" : "<p>From Tokyo to Mexico, to Rio. Yeah, you take me to utopia. I'm walking on air. We'd make out in your Mustang to Radiohead. I mean the ones, I mean like she's the one. Sun-kissed skin so hot we'll melt your popsicle. Slow cooking pancakes for my boy, still up, still fresh as a Daisy.</p>"
+    }
+]

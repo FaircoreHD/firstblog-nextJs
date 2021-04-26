@@ -1,0 +1,22 @@
+[
+    {
+        "kode" : "nx",
+        "title" : "Next JS"
+    },
+    {
+        "kode" : "demo",
+        "title" : "Deno TS"
+    },
+    {
+        "kode" : "php",
+        "title" : "PHP"
+    },
+    {
+        "kode" : "js",
+        "title" : "Javascript"
+    },
+    {
+        "kode" : "ng",
+        "title" : "Angular"
+    }
+]

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function Header({menu}) {
     return (
         <div className="container">
@@ -10,10 +11,14 @@ export default function Header({menu}) {
                 <a className="blog-header-logo text-dark" href="#">Large</a>
                 </div>
                 <div className="col-4 d-flex justify-content-end align-items-center">
-                <a className="link-secondary" href="#" aria-label="Search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-                </a>
-                <a className="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                    <Link href="/search">
+                        <a className="link-secondary" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
+                        </a>
+                    </Link>
+                    <Link href="/login">
+                        <a className="btn btn-sm btn-outline-secondary">Sign up</a>
+                    </Link>
                 </div>
             </div>
             </header>
@@ -22,7 +27,12 @@ export default function Header({menu}) {
             <nav className="nav d-flex justify-content-between">
                 {
                     menu.map(item => (
-                        <a key={item.kode} className="p-2 link-secondary" href="#">{item.title}</a>       
+                        <Link  href={{
+                            pathname : '/post/[kategori]',
+                            query : {kategori:item.kode}
+                        }}>
+                            <a key={item.kode} className="p-2 link-secondary">{item.title}</a>
+                        </Link>
                     ))
                 }
             </nav>

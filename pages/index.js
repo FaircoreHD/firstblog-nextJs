@@ -8,10 +8,10 @@ import Layout from '../components/layout'
 import Menu from '../data-dummy/menu.json'
 import Post from '../data-dummy/post.json'
 
-export default function Home({props}) {
+export default function Home({menu, post}) {
   return (
     <div>
-      <Layout layoutProps = {props.menu}>
+      <Layout layoutProps = {menu}>
         <Jumbotron/>
         <div className="row">
           <div className="col-md-8">
@@ -19,7 +19,7 @@ export default function Home({props}) {
               From the Firehose
             </h3>
             {
-              props.post.map(data => (
+              post.map(data => (
                 <Article key={data.id} post={data} />
               ))
             }
@@ -32,10 +32,12 @@ export default function Home({props}) {
   )
 }
 
-Home.getInitialProps = () => {
+export async function getStaticProps() {
+  const request = await fetch('http://localhost:3000/api/hello')
+  const response = await request.json()
   return {
     props : {
-      menu : Menu,
+      menu : response,
       post : Post
     }
   }

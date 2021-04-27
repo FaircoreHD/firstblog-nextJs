@@ -30,8 +30,8 @@ export default function Header({menu}) {
                         <Link  href={{
                             pathname : '/post/[kategori]',
                             query : {kategori:item.kode}
-                        }}>
-                            <a key={item.kode} className="p-2 link-secondary">{item.title}</a>
+                        }} key={item.kode}>
+                            <a className="p-2 link-secondary">{item.title}</a>
                         </Link>
                     ))
                 }
